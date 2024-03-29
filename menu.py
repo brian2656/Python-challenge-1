@@ -217,5 +217,7 @@ for item in Order:
     print (f"{item_name}{item_spaces} | {price} {price_spaces} | {quantity} {quantity_spaces}")
 
 # 11. Calculate the cost of the order using list comprehension
+Receipt_Price = format (sum([item["Price"] * item["Quantity"] for item in Order]), ".2f")
 # Multiply the price by quantity for each item in the order list, then sum()
 # and print the prices.
+print (f"Your total amount is ${Receipt_Price}")
